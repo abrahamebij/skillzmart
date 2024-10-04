@@ -63,11 +63,11 @@ const Navbar = () => {
           <button className="text-2xl lg:hidden">
             <FaSearch />
           </button>
-          <form className="w-full">
+          <form className="w-full lg:w-4/5">
             <input
               type="text"
               placeholder="Search for a product"
-              className="hidden lg:block input rounded-lg input-bordered min-w-72"
+              className="hidden lg:block input h-10 rounded-lg input-bordered lg:min-w-96"
             />
           </form>
         </div>
