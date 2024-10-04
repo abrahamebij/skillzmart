@@ -2,22 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+  @apply border-b lg:border-b-0 block lg:inline-block py-3 hover:bg-gray-100 lg:hover:bg-transparent lg:link hover:lg:link-primary lg:link-hover lg:underline-offset-1 font-semibold;
 }
 
 @layer utilities {
