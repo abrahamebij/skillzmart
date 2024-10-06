@@ -13,7 +13,7 @@ const Navbar = () => {
     <>
       <nav className="bg-white text-black shadow-lg flex justify-between items-center gap-x-10">
         <div className="max-w-7xl mx-auto lg:mx-0 lg:flex items-center flex-1 lg:justify-between">
-          <div className="flex flex-row-reverse items-center h-16 gap-x-5 px-4 sm:px-6 flex-1">
+          <div className="flex flex-row-reverse items-center h-16 gap-x-5 px-4 sm:px-6">
             {/* Link And Logo */}
             <Link
               href={"/"}
@@ -29,7 +29,7 @@ const Navbar = () => {
             {/* Menu */}
             <div className="flex items-center lg:hidden">
               <button
-                className="text-3xl"
+                className="text-xl sm:text-2xl"
                 onClick={() => {
                   setIsOpen(!isOpen);
                 }}
@@ -44,15 +44,22 @@ const Navbar = () => {
               isOpen ? "collapse-open" : "collapse-close"
             } overflow-hidden lg:collapse-open lg:w-fit absolute lg:static bg-white rounded-t-none flex-1`}
           >
-            <div className="collapse-content lg:!py-0 lg:flex lg:gap-x-16">
+            <div className="collapse-content lg:!py-0 lg:flex items-center lg:gap-x-10 justify-center">
               <Link href={"/"} className="nav-link" onClick={closeMenu}>
                 Home
               </Link>
-              <Link href={"/about"} className="nav-link" onClick={closeMenu}>
-                About
+              <Link
+                href={"/categories"}
+                className="nav-link"
+                onClick={closeMenu}
+              >
+                Categories
               </Link>
               <Link href={"/contact"} className="nav-link" onClick={closeMenu}>
                 Contact
+              </Link>{" "}
+              <Link href={"/signup"} className="nav-link" onClick={closeMenu}>
+                Join
               </Link>
             </div>
           </div>
@@ -60,14 +67,21 @@ const Navbar = () => {
 
         {/* Search */}
         <div className="px-4 sm:px-6 flex items-center">
-          <button className="text-2xl lg:hidden">
+          <Link
+            href={"/login"}
+            className="mx-auto btn btn-sm btn-primary text-white mr-5"
+            onClick={closeMenu}
+          >
+            Login
+          </Link>
+          <button className="text-xl sm:text-2xl">
             <FaSearch />
           </button>
-          <form className="w-full lg:w-4/5">
+          <form className="w-full lg:w-4/5 lg:hidden">
             <input
               type="text"
               placeholder="Search for a product"
-              className="hidden lg:block input h-10 rounded-lg input-bordered lg:min-w-96"
+              className="hidden lg:block input h-10 rounded-lg input-bordered border-gray-600 lg:min-w-96"
             />
           </form>
         </div>

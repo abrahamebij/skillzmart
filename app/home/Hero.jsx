@@ -5,9 +5,9 @@ import { FaSearch } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="bg-[#fdefe7]">
+    <section className="bg-tertiary py-7">
       <div className="flex max-w-screen-xl min-h-[calc(100vh-64px)] flex-col lg:flex-row gap-x-40 gap-y-16 px-4 py-8 mx-auto lg:gap-8 lg:py-16 items-center">
-        <div className="mr-auto place-self-center flex flex-col gap-y-3">
+        <div className="mx-auto place-self-center flex flex-col gap-y-3 text-center lg:text-start">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold md:text-5xl xl:text-5xl text-black">
             Welcome to SkillzMart
           </h1>
@@ -26,7 +26,7 @@ const Hero = () => {
             <form className="w-full lg:w-4/5 flex flex-1">
               <input
                 type="text"
-                className="input rounded-r-none w-full"
+                className="input input-bordered border-r-0 border-gray-400 rounded-r-none w-full"
                 placeholder="Search for a product..."
               />
               <button
@@ -39,8 +39,8 @@ const Hero = () => {
           </div>
         </div>
         {/* Hero Image */}
-        <div className="lg:mt-0 lg:col-span-5 lg:w-2/5">
-          <Img src="/hero2.png" className={"mx-auto"} alt="mockup" />
+        <div className="lg:mt-0 w-4/5 md:w-3/5 lg:w-2/5">
+          <Img src="/hero.png" className={"mx-auto"} alt="mockup" />
         </div>
       </div>
     </section>
