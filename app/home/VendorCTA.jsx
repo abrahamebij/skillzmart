@@ -10,7 +10,7 @@ const VendorCTA = () => {
       <p className="mt-4 text-lg text-gray-600">
         Are you a student? Start selling your products and services today!
       </p>
-      <Link href="/vendor-signup">
+      <Link href="/signup">
         <p className="mt-8 inline-block bg-primary text-white py-3 px-8 rounded-lg hover:bg-primary/85">
           Sign Up Now
         </p>
