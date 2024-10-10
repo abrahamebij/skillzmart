@@ -48,12 +48,8 @@ const Navbar = () => {
               <Link href={"/"} className="nav-link" onClick={closeMenu}>
                 Home
               </Link>
-              <Link
-                href={"/categories"}
-                className="nav-link"
-                onClick={closeMenu}
-              >
-                Categories
+              <Link href={"/products"} className="nav-link" onClick={closeMenu}>
+                Products
               </Link>
               <Link href={"/contact"} className="nav-link" onClick={closeMenu}>
                 Contact

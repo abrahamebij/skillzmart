@@ -18,8 +18,8 @@ const config: Config = {
     themes: [
       {
         light: {
-          primary: "E85C0D",
-          secondary: "FABC3F",
+          primary: "#E85C0D",
+          secondary: "#FABC3F",
         },
       },
     ],
