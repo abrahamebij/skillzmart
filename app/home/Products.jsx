@@ -43,7 +43,7 @@ const Products = () => {
           autoPlay={true}
           interval={3000}
           infiniteLoop={true}
-          centerSlidePercentage={window.innerWidth > 768 ? 38 : 100}
+          // centerSlidePercentage={85}
           // showArrows={false}
           centerMode={true}
           showThumbs={false}
