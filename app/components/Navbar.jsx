@@ -42,7 +42,7 @@ const Navbar = () => {
           <div
             className={`collapse ${
               isOpen ? "collapse-open" : "collapse-close"
-            } overflow-hidden lg:collapse-open lg:w-fit absolute lg:static bg-white rounded-t-none flex-1`}
+            } overflow-hidden lg:collapse-open lg:w-fit absolute lg:static bg-white rounded-t-none flex-1 z-10`}
           >
             <div className="collapse-content lg:!py-0 lg:flex items-center lg:gap-x-10 justify-center">
               <Link href={"/"} className="nav-link" onClick={closeMenu}>

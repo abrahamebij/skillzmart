@@ -9,8 +9,8 @@ const serviceSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date() },
 });
 
-let Service =
-  mongoose.models["Service"] || mongoose.model("Service", serviceSchema);
+// let Service =
+//   mongoose.models["Service"] || mongoose.model("Service", serviceSchema);
 
-export default Service;
+// export default Service;
 export { serviceSchema };

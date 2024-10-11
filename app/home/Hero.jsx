@@ -44,7 +44,8 @@ const Hero = () => {
             <form className="w-full lg:w-4/5 flex flex-1">
               <input
                 type="text"
-                className="input input-bordered border-r-0 border-gray-400 rounded-r-none w-full"
+                name="product"
+                className="input input-bordered border-r-0 border-gray-400 rounded-r-none focus:outline-none w-full"
                 placeholder="Search for a product..."
               />
               <button

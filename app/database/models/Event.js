@@ -10,7 +10,7 @@ const eventSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-let Event = mongoose.models["Event"] || mongoose.model("Event", eventSchema);
+// let Event = mongoose.models["Event"] || mongoose.model("Event", eventSchema);
 
-export default Event;
+// export default Event;
 export { eventSchema };

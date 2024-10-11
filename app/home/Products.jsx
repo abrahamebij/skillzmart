@@ -49,7 +49,7 @@ const Products = () => {
           showThumbs={false}
           showIndicators={false}
           showStatus={false}
-          stopOnHover={false}
+          stopOnHover={true}
         >
           {featuredProducts.map((product, index) => (
             <Card

@@ -12,7 +12,7 @@ const houseSchema = new mongoose.Schema({
   updatedAt: { type: Date, default: Date() },
 });
 
-let House = mongoose.models["House"] || mongoose.model("House", houseSchema);
+// let House = mongoose.models["House"] || mongoose.model("House", houseSchema);
 
-export default House;
+// export default House;
 export { houseSchema };

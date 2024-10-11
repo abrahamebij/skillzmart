@@ -37,7 +37,7 @@ const Categories = () => {
         <h2 className="text-3xl pb-5 font-bold text-gray-800 text-center">
           Categories
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 text-center mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 text-center mt-8">
           {categories.map((category, index) => (
             <div
               className="flex flex-col items-center gap-y-2 mx-auto"
@@ -49,7 +49,9 @@ const Categories = () => {
               <h2 className="text-lg lg:text-xl font-semibold">
                 {category.name}
               </h2>
-              <p className="text-sm">{category.description}</p>
+              <p className="text-sm max-w-[90%] lg:max-w-max sm:px-10">
+                {category.description}
+              </p>
             </div>
           ))}
         </div>

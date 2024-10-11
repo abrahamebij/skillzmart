@@ -51,8 +51,8 @@ const ProductsSearch = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 px-5">
-      <header className="bg-tertiary py-16">
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-tertiary py-16 px-5">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900">Search Products</h1>
           <p className="mt-3 text-lg text-gray-500">
@@ -66,7 +66,7 @@ const ProductsSearch = () => {
               value={searchQuery}
               onChange={handleSearch}
               placeholder="Search for products..."
-              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
         </div>
@@ -75,7 +75,7 @@ const ProductsSearch = () => {
       {/* Product Listings */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="flex flex-wrap gap-x-8">
             {filteredProducts.length ? (
               filteredProducts.map((product) => (
                 <Card
@@ -84,6 +84,7 @@ const ProductsSearch = () => {
                   img={product.image}
                   href={`products/${product.id}`}
                   price={product.price}
+                  containerClassName=""
                 />
                 // <div
                 //   key={product.id}
