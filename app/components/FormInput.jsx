@@ -2,7 +2,7 @@ import React from "react";
 
 const FormInput = ({ id, name, title, type, placeholder, required }) => {
   return (
-    <div className="w-full bg-white rounded-lg flex flex-col gap-y-2 p-3 shadow-lg">
+    <div className="w-full rounded-lg flex flex-col gap-y-1.5 my-3">
       <label className="font-semibold text-lg" htmlFor={id}>
         {title}
       </label>

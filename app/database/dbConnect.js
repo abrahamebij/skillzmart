@@ -1,3 +1,4 @@
+// The sole purpose of this file is to allow our app to connect to the database
 import mongoose from "mongoose";
 
 let cached = global.mongoose;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
+import NextTopLoader from "nextjs-toploader";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./globals.css";
@@ -18,9 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-gray-200 text-gray-700`}>
-        <Toaster position="top-right" />
+        {/* The toast notification */}
+        <Toaster position="top-right" richColors />
+        {/* The loading bar */}
+        <NextTopLoader easing="ease" color="#E85C0D" height={4} />
+        {/* Navigation */}
         <Navbar />
+        {/* Content */}
         {children}
+        {/* Footer */}
         <Footer />
       </body>
     </html>

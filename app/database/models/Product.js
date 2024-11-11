@@ -5,15 +5,18 @@ const productSchema = new mongoose.Schema({
   name: String,
   description: String,
   price: Number,
-  description: String,
   category: String,
+  views: { type: Number, default: 0 },
   img: [String],
   negotiable: Boolean,
   createdAt: {
     type: Date,
     default: Date(),
   },
-  updatedAt: Date,
+  updatedAt: {
+    type: Date,
+    default: Date(),
+  },
 });
 
 // const Product =

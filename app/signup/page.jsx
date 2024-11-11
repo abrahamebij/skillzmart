@@ -20,7 +20,19 @@ export default function page() {
     };
 
     // Send the user data to the server to create a new user
-    let response = await createUser(data);
+    let response = await createUser({
+      ...data,
+      products: [
+        {
+          name: "Earrings",
+          description: "String description",
+          price: 500,
+          category: "Accessories",
+          img: ["/cup.jpg"],
+          negotiable: false,
+        },
+      ],
+    });
     // The createUser function returns a promise that resolves to the success message if the user is created successfully, or null if there was an error
     // Toast.success or Toast.error are used to display success or error messages respectively using the sonner library
     if (response) {
@@ -30,12 +42,15 @@ export default function page() {
     }
   }
   return (
-    <div className="w-full h-full bg-slate-100 flex items-center justify-center">
-      <div className="w-10/12 md:w-1/2 lg:w-1/3 h-1/3 md:h-1/2 lg:h-2/3 font-sans">
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="w-10/12 md:w-3/5 lg:w-2/5">
         <h2 className=" font-bold text-primary text-center my-5 text-lg md:text-xl lg:text-2xl">
           Sign Up to Continue
         </h2>
-        <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col gap-y-4 bg-white rounded px-3 py-2 shadow-xl"
+          onSubmit={handleSubmit}
+        >
           <FormInput
             title={"Name"}
             placeholder={"Enter your name here.."}

@@ -44,16 +44,22 @@ const Navbar = () => {
               isOpen ? "collapse-open" : "collapse-close"
             } overflow-hidden lg:collapse-open lg:w-fit absolute lg:static bg-white rounded-t-none flex-1 z-10`}
           >
-            <div className="collapse-content lg:!py-0 lg:flex items-center lg:gap-x-10 justify-center">
+            <div className="collapse-content lg:!py-0 lg:flex items-center lg:gap-x-5 justify-center !px-0">
               <Link href={"/"} className="nav-link" onClick={closeMenu}>
                 Home
               </Link>
               <Link href={"/products"} className="nav-link" onClick={closeMenu}>
                 Products
               </Link>
-              <Link href={"/contact"} className="nav-link" onClick={closeMenu}>
-                Contact
-              </Link>{" "}
+              <Link href={"/events"} className="nav-link" onClick={closeMenu}>
+                Events
+              </Link>
+              <Link href={"/services"} className="nav-link" onClick={closeMenu}>
+                Services
+              </Link>
+              <Link href={"/housing"} className="nav-link" onClick={closeMenu}>
+                Housing
+              </Link>
               <Link href={"/signup"} className="nav-link" onClick={closeMenu}>
                 Join
               </Link>
