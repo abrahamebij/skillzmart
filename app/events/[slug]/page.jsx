@@ -45,7 +45,7 @@ const page = () => {
                 
             </div>
             <div className='col-span-1 relative h-full'>
-                <div className='relative md:relative lg:sticky lg:top-0 w-full p-5'>
+                <div className='relative md:relative lg:sticky lg:top-0 w-full p-5 bg-neutral-300 ring-1 ring-neutral-400 rounded-2xl'>
                     <div className=' text-3xl font-semibold mb-5 lg:mb-10 flex flex-row justify-end items-center gap-7 lg:gap-10'>
                         <IoMdHeartEmpty className='cursor-pointer hover:scale-[1.1] duration-500' />
                         <GoShare className='cursor-pointer hover:scale-[1.1] duration-500'/>
