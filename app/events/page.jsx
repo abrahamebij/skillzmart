@@ -31,7 +31,7 @@ let events = [
 const Event = () => {
   return (
     <>
-      <header className="bg-tertiary py-16 px-5 mb-10">
+      <header className="bg-tertiary py-16 px-5 mb-10 min-h-64 flex items-center">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900">Find Events</h1>
           <p className="mt-3 text-lg text-gray-500">
@@ -39,8 +39,21 @@ const Event = () => {
           </p>
         </div>
       </header>
+      {/* <header className="bg-[url('/event-hero.webp')] h-fit bg-blend-darken bg-black/70 bg-cover text-white py-7 px-5 min-h-64">
+        <div className="w-2/5">
+          <h1 className="font-bold text-3xl">
+            Best events in <span className="text-5xl block">Ibogun</span>
+          </h1>
+          <p className="text-base">
+            Looking for something to do in Lagos? Whether you&apos;re a local,
+            new in town or just cruising through we&apos;ve got loads of great
+            tips and events. You can explore by location, what&apos;s popular,
+            our top picks, free stuff... you got this. Ready?
+          </p>
+        </div>
+      </header> */}
       {/* Cards */}
-      <div className="px-5 lg:px-10 flex justify-between items-center flex-wrap md:grid grid-cols-2 gap-x-5 gap-y-10">
+      <div className="px-5 lg:px-10 pt-10 flex justify-between items-center flex-wrap md:grid grid-cols-2 gap-x-5 gap-y-10">
         {events.map((event, index) => {
           return (
             <Card
@@ -66,9 +79,9 @@ function Card({ title, image, date, time, venue }) {
   return (
     <Link
       href={"/"}
-      className="max-w-[320px] md:max-w-[470px] md:h-52 mx-auto bg-white rounded-xl overflow-clip flex flex-col md:flex-row"
+      className="max-w-[320px] md:max-w-[540px] md:h-52 mx-auto bg-white rounded-xl overflow-clip flex flex-col md:flex-row shadow-md hover:shadow-xl"
     >
-      <div className="w-full h-64 md:h-auto md:w-72 overflow-hidden">
+      <div className="w-full h-64 md:h-auto md:w-2/5 overflow-hidden">
         <Img src={image} />
       </div>
       <div className="pb-3 pt-1 px-2 md:px-3 md:min-w-64 flex flex-col gap-y-5">
