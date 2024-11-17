@@ -62,7 +62,7 @@ const ProductDetails = ({ params }) => {
               </h2>
               <p className="mt-4 text-gray-600">{product.description}</p>
 
-              <button className="mt-8 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-500">
+              <button className="mt-8 btn btn-primary text-white">
                 Contact Vendor
               </button>
             </div>

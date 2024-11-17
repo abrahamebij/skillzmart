@@ -78,7 +78,7 @@ const Event = () => {
 function Card({ title, image, date, time, venue }) {
   return (
     <Link
-      href={"/"}
+      href={"/events/details"}
       className="max-w-[320px] md:max-w-[540px] md:h-52 mx-auto bg-white rounded-xl overflow-clip flex flex-col md:flex-row shadow-md hover:shadow-xl"
     >
       <div className="w-full h-64 md:h-auto md:w-2/5 overflow-hidden">
