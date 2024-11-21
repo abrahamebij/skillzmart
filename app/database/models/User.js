@@ -3,11 +3,15 @@ import { productSchema } from "./Product";
 import { serviceSchema } from "./Service";
 import { eventSchema } from "./Event";
 import { houseSchema } from "./House";
+import { type } from "os";
 
 const UserSchema = new mongoose.Schema({
   name: String,
   businessName: String,
-  email: String,
+  email: {
+    type: "String",
+    unique: true,
+  },
   password: String,
   phone: String,
   matric: String,

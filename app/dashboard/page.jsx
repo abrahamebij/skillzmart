@@ -1,8 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Dashboard = () => {
+  const { status } = useSession();
+  const router = useRouter();
+
+  if (status === "unauthenticated") {
+    router.push("/login");
+  }
+
   const [stats, setStats] = useState({
     totalProducts: 0,
     totalServices: 0,

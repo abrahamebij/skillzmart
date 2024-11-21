@@ -1,10 +1,13 @@
 "use client";
 import React from "react";
 import FormInput from "../components/FormInput";
+import axios from "axios";
 import { toast } from "sonner";
 import createUser from "../database/utils/createUser";
+import { useRouter } from "next/navigation";
 
-export default function page() {
+export default function Signup() {
+  const router = useRouter();
   async function handleSubmit(e) {
     // Prevent page from reloading when submitted
     e.preventDefault();
@@ -19,26 +22,22 @@ export default function page() {
       password: password.value,
     };
 
+    // console.log(data);
+
     // Send the user data to the server to create a new user
-    let response = await createUser({
-      ...data,
-      products: [
-        {
-          name: "Earrings",
-          description: "String description",
-          price: 500,
-          category: "Accessories",
-          img: ["/cup.jpg"],
-          negotiable: false,
-        },
-      ],
-    });
+    let response = await createUser(JSON.stringify(data));
+    response = JSON.parse(response);
     // The createUser function returns a promise that resolves to the success message if the user is created successfully, or null if there was an error
     // Toast.success or Toast.error are used to display success or error messages respectively using the sonner library
-    if (response) {
-      toast.success(response);
-    } else {
-      toast.error("Something went wrong");
+    try {
+      if (response.statusCode === 200) {
+        toast.success(response.msg);
+        router.push("/login");
+      } else {
+        toast.error(response.msg);
+      }
+    } catch (e) {
+      toast.error(e.message);
     }
   }
   return (
@@ -48,7 +47,7 @@ export default function page() {
           Sign Up to Continue
         </h2>
         <form
-          className="flex flex-col gap-y-4 bg-white rounded px-3 py-2 shadow-xl"
+          className="flex flex-col gap-y-4 bg-white rounded px-5 py-2 shadow-xl"
           onSubmit={handleSubmit}
         >
           <FormInput
@@ -70,7 +69,7 @@ export default function page() {
           />
           <FormInput title={"Password"} id={"password"} type={"password"} />
 
-          <button className="w-full p-2 text-lg bg-primary text-white font-semibold rounded my-4 lg:hover:scale-[1.03] duration-500">
+          <button className="w-full btn btn-primary text-white text-lg">
             Sign up
           </button>
         </form>
