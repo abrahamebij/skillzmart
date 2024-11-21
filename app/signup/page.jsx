@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import FormInput from "../components/FormInput";
-import axios from "axios";
 import { toast } from "sonner";
 import createUser from "../database/utils/createUser";
 import { useRouter } from "next/navigation";
